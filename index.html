@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mata Mosquitos<!DOCTYPE html>
+    <html lang="pt-br" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="estilo.css">
+        <script src="jogo.js">
+
+
+        </script>
+      </head>
+      <body onresize="ajustaPalcoTamanho()">
+
+        <img src="imagens/game.png" alt="" class="fim-jogo">
+        <select id="dificuldade" name="">
+          <option value="facil">Fácil</option>
+          <option value="dificil">Dificil</option>
+          <option value="norris">Chuck Norris</option>
+        </select>
+        <button onmouseup="rodaDificuldade()" type="button" name="button" class="botao">Iniciar</button>
+
+        <div class="painel">
+          <div class="vidas">
+            <img class='vidas' src="imagens/coracao_vazio.png" alt="">
+            <img class='vidas' src="imagens/coracao_vazio.png" alt="">
+            <img class='vidas' src="imagens/coracao_vazio.png" alt="">
+          </div>
+
+          <div class="cronometro">
+            Tempo Restante:
+          </div>
+        </div>
+
+
+        <script>
+
+        function rodaDificuldade(){
+          var dificuldade = document.getElementById('dificuldade').value;
+          window.location.href="app.html?"+dificuldade;
+        }
+
+        //setInterval(geraMosquito,3000)
+        </script>
+      </body>
+    </html>
+</title>
+  </head>
+  <body>
+
+  </body>
+</html>

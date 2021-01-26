@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jogo.js">
+
+    </script>
+  </head>
+  <body onresize="ajustaPalcoTamanho()">
+
+    <div class="painel">
+      <div class="vidas">
+        <img class='vidas' src="imagens/coracao_cheio.png" alt="">
+        <img class='vidas' src="imagens/coracao_cheio.png" alt="">
+        <img class='vidas' src="imagens/coracao_cheio.png" alt="">
+      </div>
+
+      <div class="cronometro">
+        Tempo Restante: <span id="contador">50</span>
+      </div>
+    </div>
+
+
+    <script>
+
+    var dificuldade = window.location.search;
+    if (dificuldade=='?facil'){
+      setInterval(contaTempo,1000);
+      var criaMosca = setInterval(geraMosquito,2000);
+    }else if (dificuldade=='?dificil') {
+      setInterval(contaTempo,1000);
+      var criaMosca = setInterval(geraMosquito,1000);
+    } else{
+      setInterval(contaTempo,1000);
+      var criaMosca = setInterval(geraMosquito,750);
+    }
+  //  setInterval(contaTempo,1000);
+  //  var criaMosca = setInterval(geraMosquito, 3000);
+
+
+    </script>
+  </body>
+</html>
